@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Request a Quote or Product Enquiry | Zanokusha Enterprise</title>
+        <meta name="description" content="Send a product enquiry to Zanokusha Enterprise and get an instant estimate of cost and availability for spinach, cabbage or maize.">
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#1b4d20">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' data: https://*.tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' mailto: https://formspree.io">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <link rel="canonical" href="https://zanokusha-enterprise.netlify.app/enquiry.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Request a Quote or Product Enquiry | Zanokusha Enterprise">
+        <meta property="og:description" content="Send a product enquiry to Zanokusha Enterprise and get an instant estimate of cost and availability for spinach, cabbage or maize.">
+        <meta property="og:image" content="https://zanokusha-enterprise.netlify.app/images/spinach-field.jpg">
+        <meta property="og:url" content="https://zanokusha-enterprise.netlify.app/enquiry.html">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="stylesheet" href="style.css">
+
+
+    </head>
+    
+    <body>
+        <a class="skip" href="#main">Skip to main content</a>
+        <header>
+            <nav aria-label="Main">
+                <a class="logo-section" href="index.html"><img src="images/zanokusha-logo.png" alt="Zanokusha Enterprise logo" width="56" height="56"><p class="brand">Zanokusha Enterprise</p></a>
+                <button id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+                <ul id="nav-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="product.html">Products</a></li><li><a href="contact.html">Contact</a></li><li><a href="enquiry.html" aria-current="page">Enquiry</a></li></ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <h1>Submit an enquiry</h1>
+            <p class="lead">Tell us what you need and we will show you an estimated cost and availability straight away.</p>
+            <section id="enquiry-form">
+                <h2>Product enquiry</h2>
+                <form id="enquiry-form-el" novalidate method="post" action="enquiry.html">
+                    <div class="row"><div class="field"><label for="name">Full name</label><input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name"><span class="error" id="err-name" aria-live="polite"></span></div><div class="field"><label for="email">Email address</label><input type="email" id="email" name="email" required autocomplete="email"><span class="error" id="err-email" aria-live="polite"></span></div></div>
+                    <div class="row"><div class="field"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" required placeholder="083 261 3339" autocomplete="tel"><span class="error" id="err-phone" aria-live="polite"></span></div><div class="field"><label for="company">Company name (optional)</label><input type="text" id="company" name="company" maxlength="80" autocomplete="organization"><span class="error" id="err-company" aria-live="polite"></span></div></div>
+                    <div class="row"><div class="field"><label for="product">Product of interest</label><select id="product" name="product" required><option value="">Select a product</option></select><span class="error" id="err-product" aria-live="polite"></span></div><div class="field"><label for="quantity">Quantity needed (kg)</label><input type="number" id="quantity" name="quantity" required min="1" max="100000" step="1" inputmode="numeric" placeholder="e.g. 500"><span class="error" id="err-quantity" aria-live="polite"></span></div></div>
+                    <div class="field"><label for="date">Preferred delivery date (optional)</label><input type="date" id="date" name="date"><span class="error" id="err-date" aria-live="polite"></span></div>
+                    <div class="field"><label for="subject">Subject</label><input type="text" id="subject" name="subject" required minlength="4" maxlength="100"><span class="error" id="err-subject" aria-live="polite"></span></div><div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="5" required minlength="10" maxlength="1000"></textarea><span class="error" id="err-message" aria-live="polite"></span></div><div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                    <div><button class="btn" type="submit">Submit enquiry</button> <button class="btn alt" type="reset">Clear form</button></div>
+                </form>
+                <div id="enquiry-result" class="status" role="status" hidden></div>
+            </section>
+            <section id="faq">
+                <h2>Frequently asked questions</h2>
+                <div class="acc-item"><h3><button class="acc-trigger" type="button" id="q0" aria-expanded="false" aria-controls="a0">What are your minimum order quantities?</button></h3><div class="acc-panel" id="a0" role="region" aria-labelledby="q0"><div><p>Minimums depend on the product (for example 50 kg for spinach and 500 kg for maize). The enquiry form shows whether your quantity qualifies.</p></div></div></div><div class="acc-item"><h3><button class="acc-trigger" type="button" id="q1" aria-expanded="false" aria-controls="a1">Do you offer delivery services?</button></h3><div class="acc-panel" id="a1" role="region" aria-labelledby="q1"><div><p>Yes, we deliver bulk orders. Delivery rates depend on your location, so we confirm them in our reply.</p></div></div></div><div class="acc-item"><h3><button class="acc-trigger" type="button" id="q2" aria-expanded="false" aria-controls="a2">What are your payment terms?</button></h3><div class="acc-panel" id="a2" role="region" aria-labelledby="q2"><div><p>We work with clients to agree flexible payment terms. Please discuss this when placing your order.</p></div></div></div><div class="acc-item"><h3><button class="acc-trigger" type="button" id="q3" aria-expanded="false" aria-controls="a3">Are your products certified organic?</button></h3><div class="acc-panel" id="a3" role="region" aria-labelledby="q3"><div><p>We practise sustainable farming but please contact us to discuss the specific certifications you require.</p></div></div></div>
+            </section>
+            <section id="contact-quick">
+                <h2>Other ways to reach us</h2>
+                <p><strong>Phone:</strong> <a href="tel:+27832613339">+27 83 261 3339</a><br><strong>Email:</strong> <a href="mailto:info@zanokushaenterprise.co.za">info@zanokushaenterprise.co.za</a><br><strong>Address:</strong> Ward 25 Matshana Reserve, Madlebe, Empangeni 3880, South Africa</p>
+                <p><a href="contact.html">View full contact information</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Zanokusha Enterprise. All rights reserved.</p>
+            <p>Tel: <a href="tel:+27832613339">+27 83 261 3339</a> | Email: <a href="mailto:info@zanokushaenterprise.co.za">info@zanokushaenterprise.co.za</a></p>
+        </footer>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
